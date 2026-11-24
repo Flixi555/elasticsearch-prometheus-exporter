@@ -34,13 +34,6 @@ jobs:
       
     - name: Checkout repository
       uses: actions/checkout@v7
-
-    - name: Debug repository
-      run: |
-        pwd
-        ls -la
-        find . -name gradlew
-        find . -name gradle-wrapper.properties
       
     - name: Set up JDK
       uses: actions/setup-java@v6.2.0
