@@ -35,6 +35,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7
 
+    - run: |
+        ls -la gradle/wrapper
+        
     - name: Print Gradle version
       run: ./gradlew --version
       
