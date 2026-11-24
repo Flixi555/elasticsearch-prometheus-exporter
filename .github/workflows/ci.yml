@@ -47,14 +47,10 @@ jobs:
         gradle-version: ${{ env.gradle-version }}
 
     - name: Dependency Insight - Guava
-      run: gradle dependencyInsight \
-            --dependency guava \
-            --configuration runtimeClasspath
+      run: gradle dependencyInsight --dependency guava --configuration runtimeClasspath
 
     - name: Dependency Insight - Tika
-      run: gradle dependencyInsight \
-            --dependency tika \
-            --configuration runtimeClasspath
+      run: gradle dependencyInsight --dependency tika --configuration runtimeClasspath
 
     - name: Gradle build
       run: gradle --build-cache assemble
