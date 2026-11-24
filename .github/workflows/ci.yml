@@ -46,6 +46,9 @@ jobs:
       with:
         gradle-version: ${{ env.gradle-version }}
 
+    - name: Show runtime dependencies
+      run: ./gradlew dependencies --configuration runtimeClasspath
+
     - name: Gradle build
       run: gradle --build-cache assemble
 
