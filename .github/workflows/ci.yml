@@ -32,6 +32,9 @@ jobs:
         sudo sysctl -w fs.file-max=262144
         sudo sysctl -w vm.max_map_count=262144
 
+    - name: Print Gradle version
+      run: ./gradlew --version
+      
     - name: Checkout repository
       uses: actions/checkout@v7
 
